@@ -1,0 +1,183 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #000;
+    border-bottom: 2px solid #ff4500;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4500;
+}
+
+/* CONTAINER */
+.container {
+    padding: 40px;
+}
+
+.menu h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-left: 5px solid #ff4500;
+    padding-left: 10px;
+}
+
+/* ITEM PRODUTO */
+.item {
+    display: flex;
+    gap: 25px;
+    background: #1a1a1a;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.4);
+}
+
+.product-img img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+}
+
+.product-tag {
+    color: #ff4500;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO MAIS INFO */
+.btn {
+    cursor: pointer;
+    background: #ff4500;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ff2200;
+}
+
+/* BLOCOS INFO */
+.bloco-info {
+    margin-bottom: 15px;
+}
+
+.bloco-info summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* CARDS NUTRICIONAIS */
+.cards-nutricionais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.card strong {
+    display: block;
+    font-size: 18px;
+    color: #ff4500;
+}
+
+.card span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* TABELA NUTRICIONAL */
+.tabela-nutricional {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-nutricional td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+.tabela-nutricional tr:nth-child(even) {
+    background: #1f1f1f;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-img img {
+        width: 100%;
+        height: auto;
+    }
+
+}
