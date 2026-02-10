@@ -32,13 +32,33 @@ body {
     border-bottom: 1px solid #222;
 }
 
+/* =========================
+   LOGO (Hambúrguer)
+========================= */
 .logo {
-    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
+
+    color: #ff6a00;
+    text-decoration: none;
 }
 
-/* Menu */
+.logo .material-icons {
+    font-size: 34px;
+}
+
+.logo:hover {
+    color: #ff8c00;
+}
+
+/* =========================
+   MENU
+========================= */
 .menu-topo {
     display: flex;
     gap: 30px;
@@ -56,7 +76,25 @@ body {
     color: #ff6a00;
 }
 
-/* Botão */
+/* Item ativo */
+.menu-topo a.ativo {
+    color: #ff6a00;
+}
+
+.menu-topo a.ativo::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff6a00;
+    border-radius: 2px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
 .btn-entrar {
     background: linear-gradient(135deg, #ff6a00, #ff8c00);
     border: none;
@@ -89,7 +127,9 @@ body {
     gap: 50px 30px;
 }
 
-/* Card */
+/* =========================
+   CARD (agora é <a>)
+========================= */
 .item-cardapio {
     background: #181818;
     border-radius: 16px;
@@ -100,7 +140,10 @@ body {
     align-items: center;
     text-align: center;
 
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
+
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -136,6 +179,10 @@ body {
     }
 
     .menu-topo {
+        display: none;
+    }
+
+    .logo-text {
         display: none;
     }
 
